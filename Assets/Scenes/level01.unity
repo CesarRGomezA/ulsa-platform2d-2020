@@ -307,7 +307,6 @@ GameObject:
   - component: {fileID: 958458641}
   - component: {fileID: 958458644}
   - component: {fileID: 958458643}
-  - component: {fileID: 958458642}
   - component: {fileID: 958458645}
   m_Layer: 0
   m_Name: Character2D
@@ -399,19 +398,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &958458642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958458638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abed55e038a700341aada0c580f56be3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2.5
 --- !u!70 &958458643
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -461,7 +447,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc4a408c0681c142839137aea6f1c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpForce: 7
   moveSpeed: 2
+  rayColor: {r: 1, g: 0, b: 1, a: 1}
+  rayDistance: 1.6
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1 &1321440103
 GameObject:
   m_ObjectHideFlags: 0
