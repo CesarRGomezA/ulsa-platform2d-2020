@@ -5,10 +5,8 @@ using Platform2DUtils.GameplaySystem;
 
 public class Player : Character2D
 {
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    Score score;
 
     void FixedUpdate() 
     {
@@ -32,10 +30,17 @@ public class Player : Character2D
     void LateUpdate()
     {
         spr.flipX = FlipSprite;
-        anim.SetFloat("moveX", Mathf.Abs(GameplaySystem.Axis.x));
+        anim.SetFloat("moveX", Mathf.Abs(GameplaySystem.Axis.x));        
+    }
 
-        
-       
+    void OnTriggerSenter2D(Collider2D other)
+    {
+        if (other.CompareTag("collectable"))
+        {
+            Collectable collectable = other.GetComponent<Collectable>();
+            score.AddPoints(collectable.Points);
+            Destroy(other.gameObject);
+        }
     }
 
 
