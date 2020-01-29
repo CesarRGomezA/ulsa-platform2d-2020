@@ -5,8 +5,7 @@ using Platform2DUtils.GameplaySystem;
 
 public class Player : Character2D
 {
-    [SerializeField]
-    Score score;
+    
 
     void FixedUpdate() 
     {
@@ -33,15 +32,14 @@ public class Player : Character2D
         anim.SetFloat("moveX", Mathf.Abs(GameplaySystem.Axis.x));        
     }
 
-    void OnTriggerSenter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("collectable"))
         {
             Collectable collectable = other.GetComponent<Collectable>();
-            score.AddPoints(collectable.Points);
+           Gamemanager.instance.Score.AddPoints(collectable.Points);
+           // score.AddPoints(collectable.Points);
             Destroy(other.gameObject);
         }
     }
-
-
 }

@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     Text txtScore;
-    [SerializeField]
     int currentScore;
    
 
