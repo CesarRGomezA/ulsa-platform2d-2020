@@ -48,6 +48,15 @@ TagManager:
   - name: collectable
     uniqueID: 3473358793
     locked: 0
+  - name: bushBehind
+    uniqueID: 1820311759
+    locked: 0
+  - name: rock
+    uniqueID: 229318543
+    locked: 0
+  - name: grass
+    uniqueID: 24792623
+    locked: 0
   - name: player
     uniqueID: 3575159039
     locked: 0
