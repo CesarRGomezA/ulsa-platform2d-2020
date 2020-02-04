@@ -60,3 +60,9 @@ TagManager:
   - name: player
     uniqueID: 3575159039
     locked: 0
+  - name: enemy
+    uniqueID: 1502926361
+    locked: 0
+  - name: frontBigTree
+    uniqueID: 557592305
+    locked: 0
