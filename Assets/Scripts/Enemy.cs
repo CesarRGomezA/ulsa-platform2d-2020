@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IFlip
 {
     // Start is called before the first frame update
     
@@ -28,5 +28,10 @@ public class Enemy : MonoBehaviour
             dir = dir == Vector2.right ? Vector2.left : Vector2.right ;
         }
     }
+
+     public void FlipSprite();
+     {
+         
+     }
 
 }
