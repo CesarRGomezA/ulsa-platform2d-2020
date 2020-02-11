@@ -1396,8 +1396,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc4a408c0681c142839137aea6f1c87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5.41
-  moveSpeed: 4
+  jumpForce: 9
+  moveSpeed: 7
   rayColor: {r: 1, g: 0, b: 1, a: 1}
   rayDistance: 1.9
   groundLayer:
@@ -2792,6 +2792,7 @@ GameObject:
   - component: {fileID: 1710805639}
   - component: {fileID: 1710805638}
   - component: {fileID: 1710805637}
+  - component: {fileID: 1710805641}
   m_Layer: 0
   m_Name: enemy
   m_TagString: Untagged
@@ -2904,6 +2905,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &1710805641
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710805636}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.6, y: 0.69}
+  m_Direction: 0
 --- !u!1 &1834520492
 GameObject:
   m_ObjectHideFlags: 0

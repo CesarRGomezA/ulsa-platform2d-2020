@@ -39,10 +39,50 @@ namespace Platform2DUtils.GameplaySystem
         ///</summary>
         ///<param name="rb2D">Transform component of the player</param>
         ///<param name="moveSpeed">The coeficient of speed</param>
-        public static void MovementAddForce(Rigidbody2D rb2D, float moveSpeed)
+        ///<param name="maxVel">Maximum velocity of rigidbody on x component</param>
+        public static void MovementAddForce(Rigidbody2D rb2D, float moveSpeed, float maxVel)
         {
             rb2D.AddForce(Vector2.right * moveSpeed * Axis.x, ForceMode2D.Impulse);
+            float velXClamp = Mathf.Clamp(rb2D.velocity.x, -maxVel, maxVel);
+            rb2D.velocity = new Vector2(velXClamp, rb2D.velocity.y);
+            if(Axis.x == 0)
+            {
+                rb2D.velocity = new Vector2(0f, rb2D.velocity.y);
+            }
         }
+
+          ///<summary>
+        /// Moves player in Horizontal axis with keyboard inputs using force.
+        ///</summary>
+        ///<param name="rb2D">Transform component of the player</param>
+        ///<param name="moveSpeed">The coeficient of speed</param>
+        ///<param name="maxVel">Maximum velocity of rigidbody on x component</param>
+        ///<param name="grounding">Detects if im touching grouding layer</param>
+        public static void MovementAddForce(Rigidbody2D rb2D, float moveSpeed, float maxVel, bool grounding)
+        {
+            rb2D.AddForce(Vector2.right * moveSpeed * Axis.x, ForceMode2D.Impulse);
+            float velXClamp = Mathf.Clamp(rb2D.velocity.x, -maxVel, maxVel);
+            rb2D.velocity = new Vector2(velXClamp, rb2D.velocity.y);
+            if(Axis.x == 0 && grounding)
+            {
+                rb2D.velocity = new Vector2(0f, rb2D.velocity.y);
+            }
+        }
+
+        ///<summary>
+        /// Moves player in Horizontal axis with keyboard inputs using velocity.
+        ///</summary>
+        ///<param name="rb2D">Transform component of the player</param>
+        ///<param name="moveSpeed">The coeficient of speed</param>
+        ///<param name="maxVel">Maximum velocity of rigidbody on x component</param>
+        public static void MovementVelocity(Rigidbody2D rb2D, float moveSpeed, float maxVel)
+        {
+            rb2D.velocity = new Vector2(Axis.x * moveSpeed , rb2D.velocity.y);
+            Vector2 ClampedVelocity = Vector2.ClampMagnitude(rb2D.velocity, maxVel);
+            rb2D.velocity = new Vector2(ClampedVelocity.x, rb2D.velocity.y);
+        }
+
+
 
         ///<summary>
         /// Returns if jump button was buttondown.

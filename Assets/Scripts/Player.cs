@@ -20,9 +20,9 @@ public class Player : Character2D
         }
         anim.SetBool("grownding", Grounding);
 
-        GameplaySystem.MovementAddForce(rb2D, moveSpeed);
-        float velXClamp = Mathf.Clamp(rb2D.velocity.x, -maxVel, maxVel);
-        rb2D.velocity = new Vector2(velXClamp, rb2D.velocity.y);
+        //GameplaySystem.MovementAddForce(rb2D, moveSpeed, maxVel, Grounding);
+        GameplaySystem.MovementVelocity(rb2D, moveSpeed, maxVel);
+        
     }
 
     
