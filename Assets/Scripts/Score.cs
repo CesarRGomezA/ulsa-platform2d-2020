@@ -15,6 +15,7 @@ public class Score : MonoBehaviour
         txtScore = GetComponent<Text>();
     }
 
+
     public void AddPoints(int points)
     {
         currentScore += points;
