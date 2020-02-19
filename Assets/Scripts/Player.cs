@@ -8,6 +8,12 @@ public class Player : Character2D
     [SerializeField]
     float maxVel;
 
+    void Start()
+    {
+        Gamemanager.instance.gameData.Player = this;
+        Gamemanager.instance.Save();
+    }
+
     void FixedUpdate() 
     {
          if(GameplaySystem.JumpBtn)
