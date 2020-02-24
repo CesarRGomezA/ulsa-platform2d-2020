@@ -35,9 +35,22 @@ public class Gamemanager : MonoBehaviour
         MemorySystem.SaveData(gameData);
     }
 
+     public void Load()
+    {
+        gameData = MemorySystem.LoadData();
+    }
+    
+
+    public void Delete()
+    {
+        MemorySystem.DeleteData();
+    }
 
    void Start()
    {
+        Delete();
+        Load();
+        Debug.Log(gameData.PlayerPos);
         //int scene = SceneManager.GetActiveScene().buildIndex;
         //score.gameObject.SetActive(scene > 0);
    }
