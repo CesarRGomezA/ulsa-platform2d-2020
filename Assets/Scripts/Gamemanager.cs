@@ -48,11 +48,7 @@ public class Gamemanager : MonoBehaviour
 
    void Start()
    {
-        Delete();
-        Load();
-        Debug.Log(gameData.PlayerPos);
-        //int scene = SceneManager.GetActiveScene().buildIndex;
-        //score.gameObject.SetActive(scene > 0);
+
    }
    
 }
