@@ -12,9 +12,16 @@ public class NewGame : MonoBehaviour
     [SerializeField]
     Button btnNewGame;
 
+    void Awake()
+    {
+        btnNewGame.onClick.AddListener(Save);
+    }
+
     void Save()
     {
-        MemorySystem.SaveData(GameManager.instance.gameData, );
+        if(string.IsNullOrEmpty(fileName.text)) return;
+        MemorySystem.SaveData(Gamemanager.instance.gameData, fileName.text);
+        gameObject.SetActive(false);
     }
 
 }
