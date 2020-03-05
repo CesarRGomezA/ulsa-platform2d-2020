@@ -456,6 +456,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7017267147940706495, guid: 3d8b2320cf823cf4ea4e2bfa9441feee,
+        type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 296323379}
     - target: {fileID: 7315858698208606820, guid: 3d8b2320cf823cf4ea4e2bfa9441feee,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -471,6 +476,12 @@ PrefabInstance:
 --- !u!224 &132552931 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2272449148397916562, guid: 3d8b2320cf823cf4ea4e2bfa9441feee,
+    type: 3}
+  m_PrefabInstance: {fileID: 132552930}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &296323379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6980125084157290201, guid: 3d8b2320cf823cf4ea4e2bfa9441feee,
     type: 3}
   m_PrefabInstance: {fileID: 132552930}
   m_PrefabAsset: {fileID: 0}

@@ -11,9 +11,15 @@ public class Gamemanager : MonoBehaviour
 
    Score score;
 
+    [SerializeField]
+
+    GameObject menu;
+
     public Score Score {get => score; }
    
     public GameData gameData {get; set;}
+
+    public GameObject Menu {get => menu;}
 
    void Awake() 
    {

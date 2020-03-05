@@ -60,6 +60,20 @@ namespace Platform2DUtils.MemorySystem
             return new GameData();
         }
 
+         public static GameData LoadData(string path)
+        {
+            if(DataExist)
+            {
+                BinaryFormatter bf = new BinaryFormatter();
+                FileStream file = File.Open(path, FileMode.Open);
+                string json = bf.Deserialize(file) as string;
+                GameData gameData = JsonUtility.FromJson<GameData>(json);
+                return gameData;
+            }
+
+            return new GameData();
+        }
+
         public static void DeleteData()
         {
             if(DataExist) File.Delete(path);
