@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Platform2DUtils.GameplaySystem;
+using Platform2DUtils.MemorySystem;
 
 public class Player : Character2D
 {
@@ -28,8 +29,9 @@ public class Player : Character2D
             {
                 Gamemanager.instance.gameData.PlayerPos = transform.position;
                 //Debug.Log(Gamemanager.instance.gameData.Player);
-                Gamemanager.instance.Save();
-                
+                //Gamemanager.instance.Save();
+                GameData gd = Gamemanager.instance.gameData;
+                MemorySystem.SaveData(gd, gd.GameName);
 
                 anim.SetTrigger("jump");
                 GameplaySystem.Jump(rb2D, jumpForce);

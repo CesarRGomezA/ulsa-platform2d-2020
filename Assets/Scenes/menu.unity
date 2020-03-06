@@ -296,6 +296,11 @@ PrefabInstance:
       propertyPath: panelOptions
       value: 
       objectReference: {fileID: 409565680}
+    - target: {fileID: 645448256203125830, guid: 3d8b2320cf823cf4ea4e2bfa9441feee,
+        type: 3}
+      propertyPath: panelSaves
+      value: 
+      objectReference: {fileID: 1501394116}
     - target: {fileID: 1633303720887076035, guid: 3d8b2320cf823cf4ea4e2bfa9441feee,
         type: 3}
       propertyPath: m_IsActive
@@ -540,7 +545,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 1
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -614,7 +619,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1501394117
 RectTransform:
   m_ObjectHideFlags: 0

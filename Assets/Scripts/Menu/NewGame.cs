@@ -21,6 +21,7 @@ public class NewGame : MonoBehaviour
     {
         if(string.IsNullOrEmpty(fileName.text)) return;
         MemorySystem.SaveData(Gamemanager.instance.gameData, fileName.text);
+        Gamemanager.instance.gameData = new GameData(Vector3.zero, fileName.text);
         gameObject.SetActive(false);
     }
 

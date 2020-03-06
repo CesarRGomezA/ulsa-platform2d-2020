@@ -13,6 +13,16 @@ public class GameData
   Player player;
   [SerializeField]
   Vector3 playerPos;
+  [SerializeField]
+  string gameName;
+
+  public GameData(){}
+
+  public GameData(Vector3 playerPos, string gameName)
+  {
+    this.playerPos = playerPos;
+    this.gameName = gameName;
+  }
 
   public Player Player
   {
@@ -20,4 +30,6 @@ public class GameData
       set => player = value;
   }
   public Vector3 PlayerPos { get => playerPos; set => playerPos = value; }
+
+  public Vector3 gameName { get => gameName; set => gameName = value; }
 }

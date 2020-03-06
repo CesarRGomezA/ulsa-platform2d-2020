@@ -29,7 +29,7 @@ public class SaveObject : MonoBehaviour
 
     void LoadSave()
     {
-        Gamemanager.instance.gameData = MemorySystem.LoadData();
+        Gamemanager.instance.gameData = MemorySystem.LoadData($"{MemorySystem.SavePath}/{fileName}");
         LoadScene();
     }
 

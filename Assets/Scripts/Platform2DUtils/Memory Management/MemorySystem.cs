@@ -13,8 +13,6 @@ namespace Platform2DUtils.MemorySystem
         {
             get => $"{Application.persistentDataPath}/";
             
-
-            
         }
 
         static string path = $"{Application.persistentDataPath}/myGame.data";
@@ -44,6 +42,13 @@ namespace Platform2DUtils.MemorySystem
         public static bool DataExist
         {
             get => File.Exists(path);
+        }
+
+        public static bool DataSavesExist()
+        {
+            DirectoryInfo info = new DirectoryInfo(MemorySystem.SavePath);
+            FileInfo[] fileInfo = info.GetFiles();
+            return fileInfo.Length > 0;
         }
 
          public static GameData LoadData()

@@ -19,6 +19,9 @@ public class Menu : MonoBehaviour
     [SerializeField]
     GameObject panelOptions;
 
+    [SerializeField]
+    GameObject panelSaves;
+
     void Awake() 
     {
         btnLoadGame.onClick.AddListener(LoadGame);
@@ -28,13 +31,12 @@ public class Menu : MonoBehaviour
 
     void Start() 
     {
-           btnLoadGame.gameObject.SetActive(MemorySystem.DataExist);
+           btnLoadGame.gameObject.SetActive(MemorySystem.DataSavesExist());
     }
 
     public void LoadGame()
     {
-        Gamemanager.instance.gameData = MemorySystem.LoadData();
-        LoadScene();
+        panelSaves.SetActive(true);
     }
 
 
